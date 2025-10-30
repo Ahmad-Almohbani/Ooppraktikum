@@ -83,7 +83,7 @@ public class Haushalsroboterview {
     private MenuItem mnItmTxtImport 		= new MenuItem("txt-Import");
     private MenuItem mnItmCsvExport 		= new MenuItem("csv-Export");    
     //-------Ende Attribute der grafischen Oberflaeche-------
-    private Haushaltsroboter haushaltsroboter;
+  
     private HaushalsroboterControl haushalsroboterControl;
     private HaushaltsroboterModel haushaltsroboterModel;
     
@@ -203,9 +203,9 @@ public class Haushalsroboterview {
 		    });
 	    }
 	   void zeigeHaushaltsroboterAn(){
-	    	if(this.haushaltsroboter != null){
+	    	if(haushaltsroboterModel.getHaushaltsroboter() != null){
 	    		txtAnzeige.setText(
-	    			this.haushaltsroboter.gibHaushaltsroboterZurueck(' '));
+	    			this.haushaltsroboterModel.getHaushaltsroboter().gibHaushaltsroboterZurueck(' '));
 	    	}
 	    	else{
 	    		zeigeInformationsfensterAn("Bisher wurde kein Haushaltsroboter aufgenommen!");
